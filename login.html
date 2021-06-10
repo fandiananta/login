@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" rel="stylesheet">
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <title>Login</title>
+
+    <style>
+        body {
+            overflow-y: hidden;
+            overflow-x: hidden;
+            font-family: 'Nunito';
+        }
+        
+        h3 {
+            font-size: 40px;
+            margin-top: 80px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            animation-duration: 4s;
+        }
+        
+        p {
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            animation-delay: 0.9s;
+        }
+        
+        form {
+            padding: 30px;
+        }
+        
+        .card {
+            margin: auto;
+            width: 90%;
+        }
+        
+        form input {
+            height: 50px;
+        }
+        
+        button {
+            background-color: #F59F0C;
+            color: white;
+            height: 50px;
+        }
+        
+        .sosmed-oren {
+            display: none;
+        }
+        
+        .sosmed {
+            animation-delay: 1.1s;
+        }
+        
+        a img {
+            transition: .6s;
+        }
+        
+        a img:hover {
+            transform: rotate(360deg);
+        }
+        
+        @media screen and (max-width:990px) {
+            #hilang {
+                display: none;
+            }
+            #login {
+                margin: auto;
+            }
+            .sosmed-oren {
+                display: flex;
+                width: 150px;
+                margin: auto;
+                justify-content: space-evenly;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row ">
+
+        <div class="col-xl-6 col-lg-6 col-md-9" id="login">
+            <br>
+            <!-- Nested Row within Card Body -->
+            <div class="row ">
+
+                <div class="col-lg  animate__animated animate__fadeIn">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <img src="logo.png" alt="" width="200px">
+                        </div>
+
+                        <form class="user" method="POST" action="<?= base_url('Konsumen/login') ?>">
+                            <div class="form-group mt-1">
+                                <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" value="<?= set_value('email'); ?>" placeholder="Masukkan Alamat Email Yang Sudah Terdaftar" name="email">
+
+
+                            </div>
+                            <div class="form-group mt-1">
+                                <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan Password Anda" name="password">
+
+                            </div>
+
+                            <button type="submit" class="btn  btn-user btn-block" name="login">Login</button>
+
+
+                        </form>
+                        <hr>
+
+                        <div class="text-center">
+                            <a class="small" href=" <?= base_url('konsumen/daftar'); ?>" style="color: #F59F0C;">Buat Akun!</a>
+                        </div>
+                        <br>
+
+                        <div class="sosmed-oren">
+                            <a href="">
+                                <img src="fb oren.png" alt="">
+                            </a>
+                            <a href="">
+                                <img src="whatsapp oren.png" alt="">
+                            </a>
+
+                            <a href="">
+                                <img src="ig oren.png" alt="">
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col  animate__animated animate__fadeIn " style="background-color: #F59F0C; height: 7000px ;  " id="hilang">
+
+            <h3 class="animate__animated animate__backInDown">Selamat Datang Di <br> Riziq Mebel
+            </h3>
+            <br>
+
+
+
+            <p class="animate__animated animate__backInRight">Untuk Info lebih Lanjut Hubungi Kami </p>
+
+            <div class="sosmed d-flex m-auto animate__animated  animate__fadeIn " style="width: 150px; justify-content: space-between;">
+                <a href="">
+                    <img src="fb.png" alt="">
+                </a>
+
+                <a href="">
+                    <img src="whatsapp.png" alt="">
+                </a>
+
+                <a href="">
+                    <img src="ig.png" alt="">
+                </a>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
